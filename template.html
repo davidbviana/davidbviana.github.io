@@ -69,28 +69,14 @@
                 <th>Date Applied</th>
                 <th>Status</th>
             </tr>
-            
+            {% for row in data %}
             <tr>
-                <td>Company A</td>
-                <td>Software Engineer</td>
-                <td>2023-08-07</td>
-                <td>Applied</td>
+                <td>{{ row['Company'] }}</td>
+                <td>{{ row['Position'] }}</td>
+                <td>{{ row['Date Applied'] }}</td>
+                <td>{{ row['Status'] }}</td>
             </tr>
-            
-            <tr>
-                <td>Company B</td>
-                <td>Data Analyst</td>
-                <td>2023-08-06</td>
-                <td>In Progress</td>
-            </tr>
-            
-            <tr>
-                <td>Company C</td>
-                <td>Product Manager</td>
-                <td>2023-08-05</td>
-                <td>Rejected</td>
-            </tr>
-            
+            {% endfor %}
         </table>
     </body>
 </html>
